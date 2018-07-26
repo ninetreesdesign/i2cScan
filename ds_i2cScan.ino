@@ -27,9 +27,7 @@ void i2cScan() {
         Wire.beginTransmission(i);          // probe this i2c address
         if (Wire.endTransmission() == 0)
         {
-            Serial.print ("  device at:   ");
-            Serial.print (i);
-            Serial.print ("  [0x" + String(i, HEX) + "]\n");
+            Serial.print ("  device at: 0x" + String(i, HEX) + "  [" + String(i) + "] \n");
             count++;
             delay (1);
         }
